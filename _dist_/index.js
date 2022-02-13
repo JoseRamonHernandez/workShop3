@@ -17,13 +17,13 @@ const getData = async (city) => {
     const descripcion = respuesta.data.weather[0].description;
     const coorLong = respuesta.data.coord.lon;
     const coorLat = respuesta.data.coord.lat;
-    console.log(ciudad);
-    console.log(pais);
-    console.log(icon);
-    console.log(temp);
-    console.log(descripcion);
-    console.log(coorLong);
-    console.log(coorLat);
+    // console.log(ciudad);
+    // console.log(pais);
+    // console.log(icon);
+    // console.log(temp);
+    // console.log(descripcion);
+    // console.log(coorLong);
+    // console.log(coorLat);
 
     const container = document.getElementById('container');
 
@@ -63,6 +63,22 @@ const getData = async (city) => {
     h3.appendChild(text5);
     const text6 = document.createTextNode(`Lat: ${coorLat}`);
     h3.appendChild(text6);
+
+    const br = document.createElement('br');
+    container.appendChild(br);
+    container.appendChild(br);
+    
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.innerText = 'Search new city';
+    container.appendChild(btn);
+    btn.id = 'boton';
+
+    const boton = document.getElementById('boton');
+    const accion = () =>{
+        window.location="../index.html";
+    }
+    boton.addEventListener('click', accion);
 }
 
 const formSubmit = (e) =>{
