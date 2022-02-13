@@ -76,7 +76,7 @@ const getData = async (city) => {
 
     const boton = document.getElementById('boton');
     const accion = () =>{
-        window.location="https://joseramonhernandez.github.io/workShop3/";
+        window.location="/workShop3/";
     }
     boton.addEventListener('click', accion);
 }
